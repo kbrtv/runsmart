@@ -1,0 +1,317 @@
+@media (max-width: 1200px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media (max-width: 992px){
+    .container{
+        max-width: 760px;
+    }
+    .features{
+        &__item{
+            width: 213px;
+        }
+    }
+    .catalog{
+        &__content{
+            justify-content: space-around;
+        }
+    }
+    .comments{
+        &__text{
+            width: 450px;
+        }
+    }
+    .footer{
+        &__info{
+            width: 340px;
+            height: 180px;
+        }
+        &__header{
+            font-size: 18px;
+        }
+        &__number{
+            font-size: 18px;
+        }
+        &__logo{
+            &_icon{
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+    .slider{
+        &__item{
+            width: 600px;
+        }
+    }
+}
+@media (max-width: 768px){
+    .container{
+        max-width: 540px;
+    }
+    .selection{
+        background: url(../images/section1/bg1.jpg) 35%/cover no-repeat;
+        .header{
+            &__text{
+                font-size: 11px;
+                span{
+                    font-size: 15px;
+                }
+            }
+            &__number{
+                font-size: 14px;
+            }
+            .button{
+                width: 126px;
+                font-size: 12px;
+            }
+        }
+        .button_main{
+            width: 200px;
+            font-size: 13px;
+        }
+        &__block{
+            h1{
+                font-size: 35px;
+            }
+            h2{
+                font-size: 19px;
+            }
+        }
+        &__icon{
+            font-size: 12px;
+            img{
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .features{
+        height: auto;
+        padding: 50px 0;
+        &__block{
+            margin-top: 0;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item{
+            margin-top: 30px;
+            span{
+                margin: 10px 0 10px 0;
+            }
+        }
+    }
+    .consultation{
+        min-height: 650px;
+        padding: 60px 0 70px 0;
+        &__header{
+            font-size: 30px;
+        }
+        &__text{
+            margin-top: 40px;
+            font-size: 20px;
+        }
+    }
+    .catalog{
+        .container{
+            max-width: 660px;
+        }
+        &__tabs{
+            margin-top: 30px;
+        }
+        &__tab{
+            width: 170px;
+        }
+    }
+    .comments{
+        .container{
+            max-width: 600px;
+        }
+        &__text{
+            width: 300px;
+        }
+        h2{
+            margin: 50px 0;
+        }
+        &__item{
+            margin-bottom: 60px;
+        }
+    }
+    .footer{
+        iframe{
+            position: absolute;
+            top: 180px;
+            height: 300px;
+        }
+        &__info{
+            width: 100%;
+        }
+    }
+    .slider{
+        &__item{
+            width: 420px;
+        }
+    }
+    .up{
+        display: none;
+        img{
+            display: none;
+        }
+    }
+}
+@media (max-width: 576px){
+    .container{
+        width: 100%;
+        padding: 0 10px; 
+    }
+    .selection{
+        position: relative;
+        .header{
+            flex-direction: column;
+            justify-content: start;
+            &__logo{
+                display: block;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+            &__text{
+                margin-top: 10px;
+                font-size: 15px;
+                span{
+                    font-size: 18px;
+                }
+            }
+            &__contacts{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &__number{
+                font-size: 21px;
+                margin-top: 15px;
+            }
+            .button{
+                width: 180px;
+                font-size: 16px;
+                height: 40px;
+            }
+        }
+        &__block{
+            margin-top: 45px;
+            align-items: center;
+            text-align: center;
+            h1{
+                font-size: 28px;
+            }
+            h2{
+                font-size: 16px;
+            }
+        }
+        &__icons{
+            display: none;
+        }
+        .button_main{
+            width: 250px;
+            font-size: 16px;
+            height: 55px;
+            position: absolute;
+            bottom: 90px;
+        }
+        &__link{
+            position: absolute;
+            bottom: 50px;
+            font-size: 15px;
+        }
+    }
+    .features{
+        &__header{
+            font-size: 23px;
+        }
+    }
+    .consultation{
+        min-height: 575px;
+        padding: 60px 0 70px 0;
+        &__header{
+            font-size: 20px;
+            text-align: center;
+        }
+        &__text{
+            margin-top: 25px;
+            font-size: 15px;
+            text-align: center;
+        }
+        &__block{
+            align-items: center;
+        }
+        .form{
+            align-items: center;
+        }
+    }
+    .catalog{
+        &__header{
+            font-size: 20px;
+        }
+        &__tabs{
+            flex-direction: column;
+        }
+        &__tab{
+            margin-bottom: 7px;
+            font-size: 15px;
+            width: 190px;
+        }
+        &__content{
+            margin-top: 30px;
+        }
+    }
+    .comments{
+        h2{
+            font-size: 25px;
+        }
+        &__item{
+            flex-direction: column;
+            align-items: center;
+            &_text{
+                margin-top: 10px;
+            }
+        }
+        &__text{
+            align-items: center;
+            margin-top: 20px;
+        }
+    }
+    .slider{
+        &__item{
+            width: 300px;
+        }
+        .slick-prev, .slick-next{
+            display: none;
+            position: unset;
+            img{
+                display: none;
+            }
+        }
+    }
+    .dark-bg{
+        .modal{
+            width: 300px;
+            &__close{
+                right: 0;
+                top: 5px;
+            }
+            &__form{
+                input{
+                    width: 260px;
+                }
+            }
+            &__btn{
+                width: 260px;
+            }
+            &__header{
+                font-size: 18px;
+            }
+            &__subheader{
+                font-size: 13px;
+            }
+        }
+    }
+}

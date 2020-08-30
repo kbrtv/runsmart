@@ -1,0 +1,674 @@
+@import 'libs/bootstrap-grid.min';
+
+@import 'libs/bootstrap-reboot.min';
+
+@import 'libs/fonts';
+
+@import 'libs/slick';
+
+@import 'animations';
+
+.container{
+    max-width: 950px;
+    margin: 0 auto;
+}
+.selection{
+    height: 100vh;
+    background: url('../images/section1/bg1.jpg') center (center/cover) no-repeat;
+    padding-bottom: 20px;
+    .header{
+        display: flex;
+        justify-content: space-between;
+        &__number{
+            display: block;
+            color: #ffffff;
+            font-family: "Museo Sans 700";
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 21px;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        &__logo{
+            margin-top: 24px;
+        }
+        &__text{
+            margin-top: 28px;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 400;
+            font-family: "Museo Sans 500";
+            text-align: center;
+            span{
+                font-family: "Museo Sans 700";
+                font-size: 18px;
+                font-weight: 400;
+                color: #ffffff;
+                margin-top: 12px;
+            }
+        }
+    }
+    .button{
+        width: 150px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: #c70101;
+        color: #ffffff;
+        font-family: "Museo Sans 500";
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-top: 8px;
+        border-width: 0;
+        float: right;
+        &_main{
+            width: 300px;
+            height: 50px;
+            font-size: 16px;
+            margin-top: 70px;
+        }
+    }
+    &__block{
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        h1{
+            color: #ffffff;
+            font-family: "Museo Sans 700";
+            font-size: 42px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+        h2{
+            color: #ffffff;
+            font-family: "Museo Sans 500";
+            font-size: 24px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+    }
+    &__icons{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+    &__icon{
+        color: #ffffff;
+        font-family: "Museo Sans 500";
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        margin-right: 71px;
+        &_right{
+            margin-right: 20px;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+            height: 45px;
+            margin-bottom: 25px;
+        }
+    }
+    &__link{
+        color: #ffffff;
+        font-family: "Museo Sans 500";
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 28px;
+        a{
+            color: #ffffff; 
+            text-decoration: underline;
+        }
+    }
+}
+.features{
+    height: 500px;
+    padding: 69px 0 78px 0;
+    background-color: #f6f6f6;
+    &__header{
+        color: #0d0d0d;
+        font-family: "Museo Sans 700";
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+    }
+    &__block{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+    }
+    &__item{
+        width: 247px;
+        color: #0d0d0d;
+        font-family: "Museo Sans 300";
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+        &_heart{
+            animation-name: heartbeat;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        span{
+            display: block;
+            text-align: center;
+            margin: 38px 0 26px 0;
+            color: #0d0d0d;
+            font-family: "Museo Sans 700";
+            font-size: 18px;
+            font-weight: 400
+        }
+        a{
+            color: #ff0000;
+            text-decoration: underline;         
+        }
+    }
+}
+.consultation{
+    min-height: 680px;
+    padding: 95px 0 87px 0;
+    background: url('../images/section3/bg.png') center center/cover no-repeat;
+    &__block{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__header{
+        color: #ffffff;
+        font-family: "Museo Sans 700";
+        font-size: 36px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    &__text{
+        color: #ffffff;
+        font-family: "Museo Sans 500";
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 50px;
+    }
+    .form{
+        margin-top: 36px;
+        display: flex;
+        flex-direction: column;
+        input{
+            width: 300px;
+            height: 50px;
+            border-radius: 5px;
+            background-color: #ffffff;
+            margin-bottom: 15px;
+            color: #4b4b4b;
+            font-family: "Museo Sans 300";
+            font-size: 14px;
+            font-weight: 400;
+            padding: 0 20px;
+            border: none;
+            &:nth-child(3){
+                margin-bottom: 20px;
+            }
+        }
+        #name-error, #phone-error, #email-error{
+            color: #ffffff;
+            font-family: "Museo Sans 300";
+            margin-left: 75px;
+        }
+        &__btn{
+            width: 300px;
+            height: 55px;
+            border-radius: 5px;
+            background-color: #c70101;
+            color: #ffffff;
+            font-family: "Museo Sans 500";
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            border: none;
+        }
+    }
+}
+.slider{
+    padding: 80px 0;
+    &__item{
+        width: 750px;
+        margin: 0 auto;
+        img{
+            width: 100%;
+        }
+    }
+    .slick-prev, .slick-next{
+        border: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -76px;
+        background-color: #fff;
+        outline: none;
+        img{
+            width: 30px;
+            height: 50px;
+        }
+    }
+    .slick-next{
+        left: auto;
+        right: -76px;
+    }
+}
+.catalog{
+    &__header{
+        font-family: "Museo Sans 700";
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #0d0d0d;
+        text-align: center;
+    }
+    &__tabs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+    &__tab{
+        width: 220px;
+        height: 50px;
+        border: 2px solid #d0d0d0;
+        font-family: "Museo Sans 500";
+        font-size: 18px;
+        line-height: 48px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #6b6b6b;
+        text-align: center;
+        transform: skewX(-25deg);
+        margin: 0 5px;
+        cursor: pointer;
+        transition: 0.5s all;
+        div{
+            transform: skewX(25deg);  
+        }
+        &_active{
+            background-color: #c70101;
+            border: none;
+            color: #ffffff; 
+        }
+    }
+    &__content{
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        &_active{
+            display: flex;
+        }
+    }
+    &__block{
+        width: 300px;
+        height: 480px;
+        background-color: #ffffff;
+        border: 2px solid #e8e8e8;
+        padding: 20px 16px 25px 16px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        img{
+            // width: 100%;
+            height: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+        &_header{
+            font-family: "Museo Sans 700";
+            font-size: 16px;
+            font-weight: 700;
+            color: #0d0d0d;
+            text-align: center;
+            margin-top: 20px;
+        }
+        &_text{
+            font-family: "Museo Sans 300";
+            font-size: 14px;
+            font-weight: 300;
+            color: #0d0d0d;
+            text-align: center;
+            margin-top: 18px;
+        }
+        a{
+            font-family: "Museo Sans 500";
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+            color: #c70101;
+            display: block;
+            text-align: center;
+            margin-top: 17px;
+        }
+        hr{
+            margin: 20px 0;
+            border-bottom: none;
+            background-color: #e8e8e8;
+        }
+        &_footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &_old-price{
+            font-family: "Museo Sans 300";
+            font-size: 14px;
+            font-weight: 300;
+            color: #555555;
+            div{
+                text-decoration: line-through;
+            }
+        }
+        &_price{
+            display: block;
+            font-family: "Museo Sans 700";
+            font-size: 20px;
+            font-weight: 700;
+            color: #050505;
+        }
+        &_btn{
+            width: 131px;
+            height: 40px;
+            background-color: #c70101;
+            border-radius: 5px;
+            font-family: "Museo Sans 500";
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #ffffff;
+            border: none;
+        }
+        &_wrapper{
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &_item{
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-107%);
+            &_active{
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+        &_list{
+            width: 50%;
+            margin-left: 20px;
+            transform: translateX(0%);
+            // padding-right: 20px;
+            padding-left: 19px;
+            margin-bottom: 0;
+            list-style-type: none;
+            position: relative;
+            &_active{
+                transform: translateX(-100%);
+                margin-left: 0px;
+            }
+            li{
+                position: relative;
+                width: 237px;
+                font-family: "Museo Sans 300";
+                font-size: 14px;
+                line-height: 1.2;
+                font-weight: 300;
+                color: #555555;
+                margin-bottom: 25px;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: 4px;
+                    left: -14px;
+                    width: 5px;
+                    height: 5px;
+                    background-color: #c70101;
+                }
+            }
+            hr{
+               position: absolute;
+               width: 235px;
+               bottom: 50px;
+            }
+            &_footer{
+                position: absolute;
+                bottom: 0;
+                width: 240px;
+            }
+            a{  
+                position: absolute;
+                font-family: "Museo Sans 500";
+                font-size: 14px;
+                font-weight: 500;
+                text-decoration: underline;
+                color: #c70101;
+                // bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+            }
+        }
+    }
+}
+.dark-bg{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.56);
+    top: 0;
+    .modal{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 380px;
+        min-height: 400px;
+        background-color: #f2f2f2;
+        padding: 30px 0;
+        
+        &__header{
+            font-family: "Museo Sans 700";
+            font-size: 19px;
+            font-weight: 700;
+            color: #0d0d0d;
+            text-align: center;
+        }
+        &__subheader{
+            font-family: "Museo Sans 500";
+            font-size: 14px;
+            font-weight: 500;
+            color: #0d0d0d;
+            text-align: center;
+        }
+        &__form{
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            input{
+                width: 300px;
+                height: 50px;
+                border-radius: 5px;
+                background-color: #ffffff;
+                margin-bottom: 15px;
+                color: #4b4b4b;
+                font-family: "Museo Sans 300";
+                font-size: 14px;
+                font-weight: 400;
+                padding: 0 20px;
+                border: none;
+                &:nth-child(3){
+                    margin-bottom: 20px;
+                }
+            }
+            #name-error, #phone-error, #email-error{
+                font-family: "Museo Sans 300";
+                // margin-bottom: 10px;
+               
+            }
+        }
+        &__btn{
+            width: 300px;
+            height: 55px;
+            border-radius: 5px;
+            background-color: #c70101;
+            color: #ffffff;
+            font-family: "Museo Sans 500";
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            border: none;
+        }
+        &__close{
+            color: #c70101;
+            position: absolute;
+            top: 0;
+            right: -40px;
+            font-size: 45px;
+            line-height: 10px;
+            cursor: pointer;
+        }
+        &_ty{
+            min-height: 140px;
+            &_subheader{
+                width: 213px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+#consultation, #order, #ty{
+    display: none;
+}
+.up{
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    img{
+        width: 100%;
+    }
+}
+.comments{
+    h2{
+        text-align: center;
+        margin-bottom: 70px;
+        font-family: "Museo Sans 700";
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #0d0d0d;
+        margin-top: 100px;
+    }
+    &__item{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 105px;
+        &_header{
+            font-family: "Museo Sans 700";
+            font-size: 18px;
+            font-weight: 700;
+            color: #0d0d0d;
+        }
+        &_subheader{
+            font-family: "Museo Sans 300";
+            font-size: 14px;
+            line-height: 2.2;
+            font-weight: 300;
+            color: #646464;
+        }
+        &_text{
+            font-family: "Museo Sans 300";
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #0d0d0d;
+        }
+        &:nth-child(3){
+            margin-bottom: 70px;
+        }
+    }
+    &__img{
+        width: 169px;
+        height: 169px;
+        border-radius: 84.5px;
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        width: 650px;
+    }
+}
+.footer{
+    position: relative;
+    &__map{
+        iframe{
+           width: 100%;
+           height: 500px;
+        }
+    }
+    &__info{
+        position: absolute;
+        width: 400px;
+        height: 200px;
+        background-color: #c70101;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__header{
+        text-align: center;
+        font-family: "Museo Sans 500";
+        font-size: 20px;
+        font-weight: 500;
+        color: #ffffff;
+        margin-top: 25px;
+        cursor: pointer;
+    }
+    &__number{
+        text-align: center;
+        font-size: 20px;
+        font-family: "Museo Sans 700";
+        font-weight: 700;
+        color: #ffffff;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    &__logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        &_icon{
+            width: 50px;
+            height: 50px;
+            border: 2px solid #ffffff;
+            border-radius: 100%;
+            margin: 0 15px;
+            position: relative;
+            cursor: pointer;
+            img{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+}
+@import 'libs/media';
