@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     $('.slider__item').slick({
         adaptiveHeight: true,
@@ -8,6 +9,61 @@ $(document).ready(function(){
     $('[data-modal=consultation]').on('click', function(){
         $('.dark-bg, #consultation').fadeIn();
     });
+    document.getElementById('BTN').onclick = function() {
+        let name = document.getElementById('name').value,
+            surname = document.getElementById('surname').value,
+            phone = document.getElementById('phone').value,
+            email = document.getElementById('email').value,
+            city = document.getElementById('city').value,
+            street = document.getElementById('street').value,
+            home = document.getElementById('home').value,
+            apartment = document.getElementById('apartment').value;
+        
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:3000/api/customer',
+            dataType: 'json',
+            contentType: "application/json",
+            async: false,
+            data: JSON.stringify({
+                NAME: name,
+                SURNAME: surname,
+                CUST_STATUS_ID: 1,
+                CUST_TYPE_ID: 1,
+                PHONE: 818188112,
+                EMAIL: email,
+                CITY: city,
+                STREET: street,
+                HOME: home,
+                APARTMENT: apartment,
+                CREATE_USER: 'TEST',
+                UPDATE_USER: 'TEST'
+            }),
+            success: function (data) {
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://localhost:3000/api/deals',
+                    dataType: 'json',
+                    contentType: "application/json",
+                    async: false,
+                    data: JSON.stringify({
+                        CUSTOMER_ID: data.ID,
+                        STATUS: 1,
+                        COMMENTS: "ASDASD"
+                    }),
+                    success: function (data) {
+                        $('.dark-bg, #consultation,#order,#ty').fadeOut();
+                    }, 
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        alert('Ошибка: "' + jqXHR.responseJSON.ERR_MSG + '"');
+                    }
+                });
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert('Ошибка: "' + jqXHR.responseJSON.ERR_MSG + '"');
+            }
+        })
+    };
     $('.modal__close').on('click', function(){
         $('.dark-bg, #consultation,#order,#ty').fadeOut();
     });
@@ -31,7 +87,6 @@ $(document).ready(function(){
             $(this).find("input").val("");
             $('#consultation, #order').fadeOut();
             $('.dark-bg, .modal_ty').fadeIn('slow');
-
             $('form').trigger('reset');
         });
         return false;
